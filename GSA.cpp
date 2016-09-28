@@ -1,7 +1,7 @@
 #include<iostream>
 #include<cstdlib>
 #include<windows.h>
-#include<time.h>
+#include<time.h>                          
 #include<conio.h>
 #include<math.h>
 #include<fstream>
@@ -47,11 +47,11 @@ int main()
 	infile.close();
 	return 0;
 }
-int gsa(int* arr, int low, int high, int d, int key)
-{
-	if(low<high)
-	{
-		int mid[15],c;
+int gsa(int* arr, int low, int high, int d, int key)           //THE FUNCTION APLLIES DIVIDE AND CONQUER SEARCH CRITERIA WHERE ARRAY IS 
+{                                                             //IS DIVIDED INTO D PARTS.
+	if(low<high)                                          //i.e. FOR TERNARY SEARCH D=3
+	{                                                     //AND THEN COMPARES THE TIME TAKEN BY VARIOUS SEARCHES TO ESTABLISH 
+		int mid[15],c;                                 //WHICH SEARCHING TECHNIQUE WILL BE BEST.
 		mid[1]=low+(high-low)/d;
 		for(int i=2;i<d;i++)
 		{
